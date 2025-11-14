@@ -2,120 +2,112 @@ import React, { useState } from 'react';
 import '../styles/Contact.css';
 
 function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    dogType: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+  const [email, setEmail] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    alert('문의가 접수되었습니다! 빠른 시일 내에 연락드리겠습니다.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      dogType: '',
-      message: ''
-    });
+    alert('뉴스레터 구독이 완료되었습니다!');
+    setEmail('');
   };
 
   return (
-    <section id="contact" className="contact">
-      <h2 className="section-title">분양 문의하기</h2>
-      <p className="contact-subtitle">궁금하신 사항이나 분양 문의를 남겨주세요</p>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="name">이름 *</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            placeholder="이름을 입력하세요"
-          />
+    <>
+      {/* 뉴스레터 섹션 */}
+      <section id="contact" className="newsletter-section">
+        <div className="newsletter-container">
+          <h2>최신 소식을 받아보세요</h2>
+          <p>신제품 출시, 특별 할인, 건강 정보를 가장 먼저 받아보세요</p>
+          <form className="newsletter-form" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              placeholder="이메일 주소를 입력하세요"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <button type="submit">구독하기</button>
+          </form>
         </div>
+      </section>
 
-        <div className="form-group">
-          <label htmlFor="email">이메일 *</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-            placeholder="example@email.com"
-          />
+      {/* 푸터 */}
+      <footer className="footer">
+        <div className="footer-container">
+          <div className="footer-grid">
+            {/* 회사 정보 */}
+            <div className="footer-column">
+              <h3 className="footer-logo">
+                <span className="logo-icon">🐾</span>
+                PetWear
+              </h3>
+              <p className="footer-description">
+                AI 기반 펫 웨어러블로<br />
+                반려동물의 건강한 삶을 지원합니다
+              </p>
+              <div className="social-links">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+                <a href="#" aria-label="YouTube">YouTube</a>
+              </div>
+            </div>
+
+            {/* 제품 */}
+            <div className="footer-column">
+              <h4>제품</h4>
+              <ul>
+                <li><a href="#features">기능</a></li>
+                <li><a href="#features">사양</a></li>
+                <li><a href="#features">가격</a></li>
+                <li><a href="#gallery">갤러리</a></li>
+              </ul>
+            </div>
+
+            {/* 지원 */}
+            <div className="footer-column">
+              <h4>지원</h4>
+              <ul>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">사용자 가이드</a></li>
+                <li><a href="#">고객 지원</a></li>
+                <li><a href="#">보증 정책</a></li>
+              </ul>
+            </div>
+
+            {/* 회사 */}
+            <div className="footer-column">
+              <h4>회사</h4>
+              <ul>
+                <li><a href="#">회사 소개</a></li>
+                <li><a href="#">채용</a></li>
+                <li><a href="#">파트너십</a></li>
+                <li><a href="#">연락처</a></li>
+              </ul>
+            </div>
+
+            {/* 연락처 */}
+            <div className="footer-column">
+              <h4>연락처</h4>
+              <ul className="contact-info">
+                <li>📞 1588-1234</li>
+                <li>📧 support@petwear.com</li>
+                <li>📍 서울시 강남구 테헤란로 123</li>
+                <li>⏰ 평일 09:00-18:00</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="footer-bottom">
+            <p>&copy; 2024 PetWear. All rights reserved.</p>
+            <div className="footer-links">
+              <a href="#">개인정보처리방침</a>
+              <a href="#">이용약관</a>
+              <a href="#">쿠키 정책</a>
+            </div>
+          </div>
         </div>
-
-        <div className="form-group">
-          <label htmlFor="phone">전화번호 *</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-            placeholder="010-1234-5678"
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="dogType">관심있는 품종</label>
-          <select
-            id="dogType"
-            name="dogType"
-            value={formData.dogType}
-            onChange={handleChange}
-          >
-            <option value="">선택하세요</option>
-            <option value="골든 리트리버">골든 리트리버</option>
-            <option value="포메라니안">포메라니안</option>
-            <option value="웰시코기">웰시코기</option>
-            <option value="비글">비글</option>
-            <option value="시바견">시바견</option>
-            <option value="말티즈">말티즈</option>
-            <option value="기타">기타</option>
-          </select>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="message">문의 내용 *</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-            rows="5"
-            placeholder="문의하실 내용을 입력하세요"
-          ></textarea>
-        </div>
-
-        <button type="submit" className="submit-button">문의하기</button>
-      </form>
-
-      <div className="contact-info">
-        <h3>연락처 정보</h3>
-        <p>📞 전화: 02-1234-5678</p>
-        <p>📧 이메일: info@dogworld.com</p>
-        <p>📍 주소: 서울특별시 강남구 테헤란로 123</p>
-        <p>⏰ 운영시간: 평일 10:00 - 19:00 (주말 예약 가능)</p>
-      </div>
-    </section>
+      </footer>
+    </>
   );
 }
 

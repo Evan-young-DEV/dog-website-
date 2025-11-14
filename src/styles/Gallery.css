@@ -1,45 +1,253 @@
-.gallery {
-  padding: 5rem 2rem;
-  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
-}
-
-.gallery-subtitle {
-  text-align: center;
-  font-size: 1.2rem;
-  color: #555;
-  margin-bottom: 3rem;
-}
-
-.gallery-grid {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.gallery-item {
+/* 풀스크린 갤러리 섹션 */
+.gallery-fullscreen {
+  padding: 6rem 3rem;
   background: white;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+}
+
+.gallery-header {
   text-align: center;
-  cursor: pointer;
+  margin-bottom: 4rem;
 }
 
-.gallery-item:hover {
-  transform: scale(1.05) rotate(2deg);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-}
-
-.gallery-emoji {
-  font-size: 5rem;
+.gallery-header h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--text-dark);
   margin-bottom: 1rem;
 }
 
-.gallery-caption {
-  color: #555;
+.gallery-header p {
+  font-size: 1.2rem;
+  color: var(--text-gray);
+}
+
+/* 대형 갤러리 그리드 */
+.gallery-grid-large {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.gallery-item-large {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item-large:hover {
+  transform: scale(1.03);
+}
+
+.gallery-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #e0e7ff 0%, #fce7f3 50%, #e0f2fe 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-image-placeholder span {
   font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+/* 실제 이미지 사용 시:
+.gallery-item-large img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+*/
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+  padding: 2rem 1.5rem 1.5rem;
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item-large:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-overlay p {
+  font-size: 1.1rem;
+  font-weight: 600;
   margin: 0;
+}
+
+/* 리뷰 섹션 */
+.testimonials-section {
+  padding: 8rem 3rem;
+  background: linear-gradient(135deg, #f8f9ff 0%, #fff5f7 100%);
+}
+
+.testimonials-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.testimonials-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+.testimonials-subtitle {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--text-gray);
+  margin-bottom: 4rem;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.testimonial-card {
+  background: white;
+  padding: 3rem 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-user-image {
+  margin-bottom: 1.5rem;
+}
+
+.user-image-placeholder {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.user-image-placeholder span {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+/* 실제 사용자 이미지 사용 시:
+.testimonial-user-image img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+*/
+
+.testimonial-rating {
+  text-align: center;
+  color: #fbbf24;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.testimonial-text {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  text-align: center;
+  font-style: italic;
+}
+
+.testimonial-author {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.testimonial-author strong {
+  font-size: 1.1rem;
+  color: var(--text-dark);
+}
+
+.testimonial-author span {
+  font-size: 0.95rem;
+  color: var(--text-gray);
+}
+
+/* 반응형 */
+@media (max-width: 1200px) {
+  .gallery-grid-large {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallery-fullscreen {
+    padding: 4rem 1.5rem;
+  }
+
+  .gallery-header h2 {
+    font-size: 2rem;
+  }
+
+  .gallery-header p {
+    font-size: 1rem;
+  }
+
+  .gallery-grid-large {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .testimonials-section {
+    padding: 4rem 1.5rem;
+  }
+
+  .testimonials-title {
+    font-size: 2rem;
+  }
+
+  .testimonials-subtitle {
+    font-size: 1rem;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .testimonial-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .testimonial-text {
+    font-size: 1rem;
+  }
 }
