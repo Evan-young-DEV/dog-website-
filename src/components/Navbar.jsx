@@ -44,8 +44,29 @@ function Navbar() {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('home')}>
-          <span className="logo-icon">🐾</span>
-          <span className="logo-text">PetWear</span>
+          <span className="logo-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="48" height="48">
+              <defs>
+                <linearGradient id="tempGradientNav" x1="0%" y1="0%" x2="0%" y2="100%">
+                  <stop offset="0%" style={{stopColor: '#00D9C0', stopOpacity: 1}} />
+                  <stop offset="100%" style={{stopColor: '#00B8A3', stopOpacity: 1}} />
+                </linearGradient>
+              </defs>
+              {/* Thermometer body */}
+              <rect x="18" y="8" width="12" height="22" rx="6" fill="none" stroke="url(#tempGradientNav)" strokeWidth="3"/>
+              {/* Thermometer bulb */}
+              <circle cx="24" cy="36" r="8" fill="url(#tempGradientNav)"/>
+              {/* Mercury column */}
+              <rect x="21" y="12" width="6" height="18" fill="url(#tempGradientNav)" rx="3"/>
+              <circle cx="24" cy="36" r="5" fill="#00B8A3"/>
+              {/* Temperature marks */}
+              <line x1="30" y1="12" x2="34" y2="12" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="30" y1="17" x2="33" y2="17" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="30" y1="22" x2="34" y2="22" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="30" y1="27" x2="33" y2="27" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
+            </svg>
+          </span>
+          <span className="logo-text">JellyBeam</span>
         </div>
 
         <ul className="nav-menu">

@@ -1,10 +1,13 @@
 :root {
-  /* PetPace 스타일 컬러 테마 */
-  --primary-purple: #7b2cbf;
-  --primary-cyan: #44d5d6;
-  --primary-pink: #e63946;
-  --gradient-primary: linear-gradient(135deg, #7b2cbf 0%, #44d5d6 50%, #e63946 100%);
-  --gradient-secondary: linear-gradient(90deg, #1d729d 0%, #44dadb 100%);
+  /* JellyBeam 청록색 테마 */
+  --primary-color: #00C9B7;
+  --primary-dark: #00B8A3;
+  --primary-light: #00D9C0;
+  --primary-purple: #00C9B7;
+  --primary-cyan: #00C9B7;
+  --primary-pink: #00C9B7;
+  --gradient-primary: linear-gradient(135deg, #00B8A3 0%, #00C9B7 50%, #00D9C0 100%);
+  --gradient-secondary: linear-gradient(90deg, #00B8A3 0%, #00D9C0 100%);
 
   /* 기본 색상 */
   --bg-dark: #0a0a0a;
