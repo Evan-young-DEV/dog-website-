@@ -66,7 +66,7 @@ function Navbar() {
               <line x1="30" y1="27" x2="33" y2="27" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
             </svg>
           </span>
-          <span className="logo-text">JellyBeam</span>
+          <span className="logo-text">Jellybeam</span>
         </div>
 
         <ul className="nav-menu">
