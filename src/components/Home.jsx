@@ -7,16 +7,18 @@ function Home() {
       {/* 비디오/이미지 배경 */}
       <div className="hero-media">
         <div className="hero-video-wrapper">
-          {/* 나중에 실제 비디오로 교체 */}
-          <div className="video-placeholder">
-            <div className="placeholder-overlay"></div>
-            <p className="placeholder-text">반려동물과 함께하는 일상 영상</p>
+          <div className="split-video-container">
+            <div className="video-half video-left">
+              <video autoPlay muted loop playsInline>
+                <source src="/videos/video1.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div className="video-half video-right">
+              <video autoPlay muted loop playsInline>
+                <source src="/videos/video2.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
-          {/* 실제 사용 시:
-          <video autoPlay muted loop playsInline>
-            <source src="/videos/hero-video.mp4" type="video/mp4" />
-          </video>
-          */}
         </div>
         <div className="hero-overlay"></div>
       </div>
