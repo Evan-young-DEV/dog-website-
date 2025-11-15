@@ -64,8 +64,8 @@ function Navbar() {
               <line x1="22" y1="17" x2="25" y2="17" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
               <line x1="22" y1="22" x2="26" y2="22" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
               <line x1="22" y1="27" x2="25" y2="27" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
-              {/* Temperature text - 아이콘 상단 */}
-              <text x="35" y="15" fontFamily="Arial, sans-serif" fontSize="11" fontWeight="800" fill="#FF6B6B">38.0</text>
+              {/* Temperature text - 아이콘 윗부분 */}
+              <text x="32" y="6" fontFamily="Arial, sans-serif" fontSize="11" fontWeight="800" fill="#FF6B6B">38.0</text>
             </svg>
           </span>
           <span className="logo-text">Jellybeam</span>
