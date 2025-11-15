@@ -45,7 +45,7 @@ function Navbar() {
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('home')}>
           <span className="logo-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 48" width="70" height="48">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -5 70 53" width="70" height="48">
               <defs>
                 <linearGradient id="tempGradientNav" x1="0%" y1="0%" x2="0%" y2="100%">
                   <stop offset="0%" style={{stopColor: '#00D9C0', stopOpacity: 1}} />
