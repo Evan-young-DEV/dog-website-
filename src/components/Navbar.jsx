@@ -45,7 +45,7 @@ function Navbar() {
       <div className="nav-container">
         <div className="nav-logo" onClick={() => scrollToSection('home')}>
           <span className="logo-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 48" width="80" height="48">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 48" width="70" height="48">
               <defs>
                 <linearGradient id="tempGradientNav" x1="0%" y1="0%" x2="0%" y2="100%">
                   <stop offset="0%" style={{stopColor: '#00D9C0', stopOpacity: 1}} />
@@ -53,19 +53,19 @@ function Navbar() {
                 </linearGradient>
               </defs>
               {/* Thermometer body */}
-              <rect x="10" y="8" width="12" height="22" rx="6" fill="none" stroke="url(#tempGradientNav)" strokeWidth="3"/>
+              <rect x="10" y="18" width="12" height="22" rx="6" fill="none" stroke="url(#tempGradientNav)" strokeWidth="3"/>
               {/* Thermometer bulb */}
-              <circle cx="16" cy="36" r="8" fill="url(#tempGradientNav)"/>
+              <circle cx="16" cy="46" r="8" fill="url(#tempGradientNav)"/>
               {/* Mercury column */}
-              <rect x="13" y="12" width="6" height="18" fill="url(#tempGradientNav)" rx="3"/>
-              <circle cx="16" cy="36" r="5" fill="#00B8A3"/>
+              <rect x="13" y="22" width="6" height="18" fill="url(#tempGradientNav)" rx="3"/>
+              <circle cx="16" cy="46" r="5" fill="#00B8A3"/>
               {/* Temperature marks */}
-              <line x1="22" y1="12" x2="26" y2="12" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
-              <line x1="22" y1="17" x2="25" y2="17" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
               <line x1="22" y1="22" x2="26" y2="22" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
               <line x1="22" y1="27" x2="25" y2="27" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
-              {/* Temperature text */}
-              <text x="40" y="30" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="700" fill="#00B8A3">38.0</text>
+              <line x1="22" y1="32" x2="26" y2="32" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
+              <line x1="22" y1="37" x2="25" y2="37" stroke="url(#tempGradientNav)" strokeWidth="2" strokeLinecap="round"/>
+              {/* Temperature text - 위로 배치, 작게, 강조색 */}
+              <text x="35" y="12" fontFamily="Arial, sans-serif" fontSize="11" fontWeight="800" fill="#FF6B6B">38.0</text>
             </svg>
           </span>
           <span className="logo-text">Jellybeam</span>
