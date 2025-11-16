@@ -68,8 +68,8 @@ function Navbar() {
               <line x1="22" y1="17" x2="25" y2="17" stroke={scrolled ? "url(#tempGradientNavColor)" : "url(#tempGradientNavWhite)"} strokeWidth="2" strokeLinecap="round"/>
               <line x1="22" y1="22" x2="26" y2="22" stroke={scrolled ? "url(#tempGradientNavColor)" : "url(#tempGradientNavWhite)"} strokeWidth="2" strokeLinecap="round"/>
               <line x1="22" y1="27" x2="25" y2="27" stroke={scrolled ? "url(#tempGradientNavColor)" : "url(#tempGradientNavWhite)"} strokeWidth="2" strokeLinecap="round"/>
-              {/* Temperature text */}
-              <text x="16" y="6" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="11" fontWeight="800" fill={scrolled ? "#FF6B6B" : "#ffffff"}>38.0</text>
+              {/* Temperature text inside bulb */}
+              <text x="16" y="39" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="9" fontWeight="700" fill="#000000">38</text>
             </svg>
           </span>
           <span className="logo-text">Jellybeam</span>
