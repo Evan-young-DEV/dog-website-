@@ -268,3 +268,62 @@
     bottom: 2rem;
   }
 }
+
+/* 하단 좌측 컨텐츠 */
+.bottom-left-content {
+  position: absolute;
+  bottom: 3rem;
+  left: 3rem;
+  z-index: 3;
+}
+
+.bottom-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  line-height: 1.15;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-subtitle {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin: 0 0 1rem 0;
+  line-height: 1.15;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bottom-description {
+  font-size: 0.83rem;
+  font-weight: 400;
+  color: white;
+  margin: 0 0 1.5rem 0;
+  line-height: 1.5;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  max-width: 600px;
+}
+
+.bottom-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.wearable-btn {
+  background: white;
+  color: black;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.wearable-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}

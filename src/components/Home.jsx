@@ -34,6 +34,20 @@ function Home() {
         <div className="hero-overlay"></div>
       </div>
 
+      {/* 하단 좌측 컨텐츠 */}
+      <div className="bottom-left-content">
+        <h2 className="bottom-title">Smarter Health Tracking</h2>
+        <p className="bottom-subtitle">Built for the Pets You Love</p>
+        <p className="bottom-description">
+          The first wearable that monitors body temperature, movement, and early health signals —<br />
+          so you can protect your pet before symptoms appear.
+        </p>
+        <div className="bottom-buttons">
+          <button className="wearable-btn">Dog Wearable</button>
+          <button className="wearable-btn">Cat Wearable</button>
+        </div>
+      </div>
+
     </section>
   );
 }
