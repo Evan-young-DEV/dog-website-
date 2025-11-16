@@ -34,34 +34,6 @@ function Home() {
         <div className="hero-overlay"></div>
       </div>
 
-      {/* 히어로 컨텐츠 */}
-      <div className="hero-content-wrapper">
-        <div className="hero-content-centered">
-          <h1 className="hero-main-title">
-            Monitor. Detect. Protect.
-          </h1>
-          <p className="hero-main-subtitle">
-            AI 기반 펫 웨어러블로 반려동물의 건강을 24/7 실시간으로 모니터링하세요
-          </p>
-          <div className="hero-cta-buttons">
-            <button className="cta-primary" onClick={() => {
-              document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
-            }}>
-              지금 구매하기
-            </button>
-            <button className="cta-secondary" onClick={() => {
-              document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
-            }}>
-              더 알아보기
-            </button>
-          </div>
-        </div>
-      </div>
-
-      {/* 스크롤 인디케이터 */}
-      <div className="scroll-down-indicator">
-        <div className="scroll-arrow"></div>
-      </div>
     </section>
   );
 }
