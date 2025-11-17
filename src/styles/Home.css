@@ -410,3 +410,227 @@
     font-size: 1.1rem;
   }
 }
+
+/* 비교표 섹션 */
+.comparison-section {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  padding: 5rem 2rem;
+  width: 100%;
+}
+
+.comparison-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comparison-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 0.5rem;
+  line-height: 1.2;
+}
+
+.comparison-subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.comparison-table {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+  color: white;
+  font-weight: 700;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row:hover {
+  background: #f8fafc;
+}
+
+.table-cell {
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.header-cell {
+  font-size: 1rem;
+  padding: 1.8rem 1.5rem;
+}
+
+.header-cell.jellybeam {
+  color: #10b981;
+}
+
+.header-cell.competitor {
+  color: #f59e0b;
+}
+
+.header-cell.basic {
+  color: #ef4444;
+}
+
+.feature-cell {
+  justify-content: flex-start;
+  text-align: left;
+  font-weight: 600;
+  color: #334155;
+  gap: 0.8rem;
+}
+
+.feature-cell svg {
+  flex-shrink: 0;
+  color: #0ea5e9;
+}
+
+.status-cell {
+  font-size: 1.8rem;
+}
+
+.status-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.status-icon.check {
+  background: #10b981;
+  color: white;
+}
+
+.status-icon.partial {
+  background: #f59e0b;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.status-icon.cross {
+  background: #ef4444;
+  color: white;
+}
+
+/* 반응형 */
+@media (max-width: 1024px) {
+  .comparison-section {
+    padding: 4rem 2rem;
+  }
+
+  .comparison-title {
+    font-size: 2rem;
+  }
+
+  .comparison-subtitle {
+    font-size: 1rem;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 1.8fr 1fr 1fr 1fr;
+  }
+
+  .table-cell {
+    padding: 1.2rem 1rem;
+  }
+
+  .feature-cell {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .comparison-section {
+    padding: 3rem 1rem;
+  }
+
+  .comparison-title {
+    font-size: 1.5rem;
+  }
+
+  .comparison-subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+  }
+
+  .table-header {
+    display: none;
+  }
+
+  .table-row {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    background: white;
+  }
+
+  .table-row:hover {
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  }
+
+  .feature-cell {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .status-cell {
+    padding: 0.5rem 0;
+    justify-content: space-between;
+    border-top: 1px solid #f1f5f9;
+  }
+
+  .status-cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    color: #64748b;
+    font-size: 0.9rem;
+  }
+
+  .status-icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  .comparison-table {
+    border-radius: 0;
+    box-shadow: none;
+    background: transparent;
+  }
+}

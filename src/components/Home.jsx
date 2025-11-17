@@ -3,7 +3,7 @@ import '../styles/Home.css';
 
 function Home() {
   const [currentVideo, setCurrentVideo] = useState(0);
-  const videos = ['/videos/video1.mp4', '/videos/video2.mp4'];
+  const videos = ['/videos/video1.mp4', '/videos/video2.mp4', '/videos/video3.mp4'];
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -82,6 +82,99 @@ function Home() {
               </svg>
             </div>
             <h3 className="feature-title">Future-Ready Expansion</h3>
+          </div>
+        </div>
+      </section>
+
+      {/* 비교표 섹션 */}
+      <section className="comparison-section">
+        <div className="comparison-container">
+          <h2 className="comparison-title">Why JellyBeam Detects Early Signals Better</h2>
+          <p className="comparison-subtitle">jelly beam Loopband vs Competitors</p>
+
+          <div className="comparison-table">
+            <div className="table-header">
+              <div className="table-cell header-cell">Feature Category</div>
+              <div className="table-cell header-cell jellybeam">JellyBeam</div>
+              <div className="table-cell header-cell competitor">Major Competitor</div>
+              <div className="table-cell header-cell basic">Basic Tracker</div>
+            </div>
+
+            <div className="table-row">
+              <div className="table-cell feature-cell">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M14 14.76V3.5a2.5 2.5 0 0 0-5 0v11.26a4.5 4.5 0 1 0 5 0z"></path>
+                </svg>
+                High-Accuracy Temperature Sensing (±0.2℃)
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon check">✓</span>
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon partial">●</span>
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon cross">✕</span>
+              </div>
+            </div>
+
+            <div className="table-row">
+              <div className="table-cell feature-cell">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                </svg>
+                Sleep Pattern Analysis
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon check">✓</span>
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon partial">●</span>
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon cross">✕</span>
+              </div>
+            </div>
+
+            <div className="table-row">
+              <div className="table-cell feature-cell">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+                  <line x1="12" y1="9" x2="12" y2="13"></line>
+                  <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                </svg>
+                Early Warning Alerts (Baseline Deviation)
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon check">✓</span>
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon partial">●</span>
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon cross">✕</span>
+              </div>
+            </div>
+
+            <div className="table-row">
+              <div className="table-cell feature-cell">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="18" y1="20" x2="18" y2="10"></line>
+                  <line x1="12" y1="20" x2="12" y2="4"></line>
+                  <line x1="6" y1="20" x2="6" y2="14"></line>
+                </svg>
+                Vital Index (Multi-Signal AI Fusion Score)
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon check">✓</span>
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon partial">●</span>
+              </div>
+              <div className="table-cell status-cell">
+                <span className="status-icon cross">✕</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
