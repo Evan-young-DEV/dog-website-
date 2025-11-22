@@ -18,14 +18,19 @@ function Home() {
     videoRefs.current.forEach((video, index) => {
       if (video) {
         if (index === currentVideo) {
-          video.play();
+          video.play().catch(err => console.log('Play error:', err));
         } else {
           video.pause();
-          video.currentTime = 0;
         }
       }
     });
   }, [currentVideo]);
+
+  useEffect(() => {
+    if (videoRefs.current[0]) {
+      videoRefs.current[0].play().catch(err => console.log('Initial play error:', err));
+    }
+  }, []);
 
   return (
     <>
@@ -41,6 +46,7 @@ function Home() {
                 muted
                 loop
                 playsInline
+                preload="auto"
               >
                 <source src={video} type="video/mp4" />
               </video>
