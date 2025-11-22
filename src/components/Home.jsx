@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import '../styles/Home.css';
 
 function Home() {
   const [currentVideo, setCurrentVideo] = useState(0);
   const videos = ['/videos/video1.mp4', '/videos/video2.mp4', '/videos/video3.mp4', '/videos/video4.mp4'];
+  const videoRefs = useRef([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -12,6 +13,19 @@ function Home() {
 
     return () => clearInterval(interval);
   }, []);
+
+  useEffect(() => {
+    videoRefs.current.forEach((video, index) => {
+      if (video) {
+        if (index === currentVideo) {
+          video.play();
+        } else {
+          video.pause();
+          video.currentTime = 0;
+        }
+      }
+    });
+  }, [currentVideo]);
 
   return (
     <>
@@ -22,8 +36,8 @@ function Home() {
             {videos.map((video, index) => (
               <video
                 key={index}
+                ref={(el) => (videoRefs.current[index] = el)}
                 className={`fullscreen-video ${currentVideo === index ? 'active' : ''}`}
-                autoPlay
                 muted
                 loop
                 playsInline
