@@ -1,35 +1,16 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../styles/Home.css';
 
 function Home() {
   const [currentVideo, setCurrentVideo] = useState(0);
   const videos = ['/videos/video1.mp4', '/videos/video2.mp4', '/videos/video3.mp4', '/videos/video4.mp4'];
-  const videoRefs = useRef([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentVideo((prev) => (prev + 1) % videos.length);
-    }, 5000); // 5초마다 전환
+    }, 5000);
 
     return () => clearInterval(interval);
-  }, []);
-
-  useEffect(() => {
-    videoRefs.current.forEach((video, index) => {
-      if (video) {
-        if (index === currentVideo) {
-          video.play().catch(err => console.log('Play error:', err));
-        } else {
-          video.pause();
-        }
-      }
-    });
-  }, [currentVideo]);
-
-  useEffect(() => {
-    if (videoRefs.current[0]) {
-      videoRefs.current[0].play().catch(err => console.log('Initial play error:', err));
-    }
   }, []);
 
   return (
@@ -41,12 +22,11 @@ function Home() {
             {videos.map((video, index) => (
               <video
                 key={index}
-                ref={(el) => (videoRefs.current[index] = el)}
                 className={`fullscreen-video ${currentVideo === index ? 'active' : ''}`}
+                autoPlay
                 muted
                 loop
                 playsInline
-                preload="auto"
               >
                 <source src={video} type="video/mp4" />
               </video>
