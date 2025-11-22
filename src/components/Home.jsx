@@ -3,7 +3,7 @@ import '../styles/Home.css';
 
 function Home() {
   const [currentVideo, setCurrentVideo] = useState(0);
-  const videos = ['/videos/video1.mp4', '/videos/video2.mp4', '/videos/video3.mp4'];
+  const videos = ['/videos/video1.mp4', '/videos/video2.mp4', '/videos/video3.mp4', '/videos/video4.mp4'];
 
   useEffect(() => {
     const interval = setInterval(() => {
