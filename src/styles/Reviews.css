@@ -1,0 +1,238 @@
+.reviews-section {
+  width: 100%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 80px 0;
+  overflow: hidden;
+}
+
+.reviews-container {
+  max-width: 100%;
+}
+
+.reviews-title {
+  font-family: 'BMDOHYEON', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.reviews-subtitle {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 1.2rem;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 50px;
+  font-weight: 300;
+}
+
+.reviews-rolling-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.reviews-rolling-wrapper::before,
+.reviews-rolling-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.reviews-rolling-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #667eea, transparent);
+}
+
+.reviews-rolling-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #764ba2, transparent);
+}
+
+.reviews-rolling {
+  display: flex;
+  gap: 30px;
+  animation: scroll 60s linear infinite;
+  width: fit-content;
+}
+
+.reviews-rolling:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.review-card {
+  background: white;
+  border-radius: 20px;
+  padding: 30px;
+  min-width: 400px;
+  max-width: 400px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex-shrink: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.review-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #f093fb);
+}
+
+.review-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.review-emoji {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.review-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 15px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f5f5f5;
+}
+
+.review-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.review-header {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.review-pet-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.pet-breed-age {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.review-owner-info {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.7rem;
+  color: #999;
+  font-weight: 400;
+  margin: 0;
+  margin-top: 15px;
+  text-align: right;
+}
+
+.pet-breed {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.95rem;
+  color: #764ba2;
+  font-weight: 600;
+}
+
+.pet-age {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 0.9rem;
+  color: #888;
+  font-weight: 500;
+}
+
+.pet-name {
+  font-family: 'BMDOHYEON', sans-serif;
+  font-size: 1.4rem;
+  color: #667eea;
+  margin: 5px 0 0 0;
+}
+
+.review-text {
+  font-family: 'Pretendard', sans-serif;
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  font-weight: 400;
+  text-align: left;
+  font-style: italic;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .reviews-title {
+    font-size: 2rem;
+  }
+
+  .reviews-subtitle {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+
+  .review-card {
+    min-width: 300px;
+    max-width: 300px;
+    padding: 20px;
+  }
+
+  .review-emoji {
+    font-size: 2.5rem;
+  }
+
+  .review-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .review-owner-info {
+    font-size: 0.63rem;
+  }
+
+  .pet-breed {
+    font-size: 0.85rem;
+  }
+
+  .pet-age {
+    font-size: 0.8rem;
+  }
+
+  .pet-name {
+    font-size: 1.2rem;
+  }
+
+  .review-text {
+    font-size: 0.9rem;
+  }
+
+  .reviews-rolling-wrapper::before,
+  .reviews-rolling-wrapper::after {
+    width: 50px;
+  }
+}

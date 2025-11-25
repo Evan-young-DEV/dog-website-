@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import Dogs from './components/Dogs';
 import Gallery from './components/Gallery';
+import Reviews from './components/Reviews';
 import Contact from './components/Contact';
 import './App.css';
 
@@ -13,6 +14,7 @@ function App() {
       <Home />
       <Dogs />
       <Gallery />
+      <Reviews />
       <Contact />
     </div>
   );

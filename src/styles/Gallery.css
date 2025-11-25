@@ -88,123 +88,10 @@
   margin: 0;
 }
 
-/* 리뷰 섹션 */
-.testimonials-section {
-  padding: 8rem 3rem;
-  background: linear-gradient(135deg, #f8f9ff 0%, #fff5f7 100%);
-}
-
-.testimonials-container {
-  max-width: 1400px;
-  margin: 0 auto;
-}
-
-.testimonials-title {
-  font-size: 3rem;
-  font-weight: 800;
-  text-align: center;
-  color: var(--text-dark);
-  margin-bottom: 1rem;
-}
-
-.testimonials-subtitle {
-  font-size: 1.2rem;
-  text-align: center;
-  color: var(--text-gray);
-  margin-bottom: 4rem;
-}
-
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
-}
-
-.testimonial-card {
-  background: white;
-  padding: 3rem 2.5rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.testimonial-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
-}
-
-.testimonial-user-image {
-  margin-bottom: 1.5rem;
-}
-
-.user-image-placeholder {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-}
-
-.user-image-placeholder span {
-  color: white;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-/* 실제 사용자 이미지 사용 시:
-.testimonial-user-image img {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-*/
-
-.testimonial-rating {
-  text-align: center;
-  color: #fbbf24;
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.testimonial-text {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-dark);
-  margin-bottom: 2rem;
-  text-align: center;
-  font-style: italic;
-}
-
-.testimonial-author {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.testimonial-author strong {
-  font-size: 1.1rem;
-  color: var(--text-dark);
-}
-
-.testimonial-author span {
-  font-size: 0.95rem;
-  color: var(--text-gray);
-}
-
 /* 반응형 */
 @media (max-width: 1200px) {
   .gallery-grid-large {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .testimonials-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
   }
 }
 
@@ -224,30 +111,5 @@
   .gallery-grid-large {
     grid-template-columns: 1fr;
     gap: 1rem;
-  }
-
-  .testimonials-section {
-    padding: 4rem 1.5rem;
-  }
-
-  .testimonials-title {
-    font-size: 2rem;
-  }
-
-  .testimonials-subtitle {
-    font-size: 1rem;
-  }
-
-  .testimonials-grid {
-    grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .testimonial-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .testimonial-text {
-    font-size: 1rem;
   }
 }
