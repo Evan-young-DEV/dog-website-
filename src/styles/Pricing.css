@@ -1,0 +1,314 @@
+/* Pricing Section */
+.pricing-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 80px 20px;
+  width: 100%;
+}
+
+.pricing-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.pricing-title {
+  font-size: 42px;
+  font-weight: 800;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.pricing-subtitle {
+  font-size: 18px;
+  color: #64748b;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Price Cards */
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.price-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.price-card.popular {
+  border: 3px solid #10b981;
+  transform: scale(1.05);
+}
+
+.price-card.popular:hover {
+  transform: scale(1.05) translateY(-5px);
+}
+
+.card-badge {
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ef4444;
+  color: white;
+  padding: 6px 20px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.popular-badge {
+  background: #10b981;
+}
+
+.price-card h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.price-display {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.price-original {
+  font-size: 20px;
+  color: #94a3b8;
+  text-decoration: line-through;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.price-current {
+  font-size: 48px;
+  font-weight: 800;
+  color: #10b981;
+  display: inline-block;
+}
+
+.price-period {
+  font-size: 20px;
+  color: #64748b;
+  margin-left: 5px;
+}
+
+.price-note {
+  text-align: center;
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.price-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px 0;
+}
+
+.price-features li {
+  padding: 12px 0;
+  color: #334155;
+  font-size: 15px;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.price-features li:last-child {
+  border-bottom: none;
+}
+
+.price-features li.disabled {
+  color: #cbd5e1;
+}
+
+.cta-button {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button.primary {
+  background: #10b981;
+  color: white;
+}
+
+.cta-button.primary:hover {
+  background: #059669;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.cta-button.secondary {
+  background: white;
+  color: #10b981;
+  border: 2px solid #10b981;
+}
+
+.cta-button.secondary:hover {
+  background: #f0fdf4;
+}
+
+.cta-button.large {
+  padding: 20px 40px;
+  font-size: 18px;
+}
+
+/* Price Comparison Table */
+.price-comparison-table {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  margin-bottom: 60px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.comparison-table-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 20px;
+  text-align: center;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.comparison-table thead th {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.comparison-table thead th.highlight {
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  font-size: 18px;
+}
+
+.comparison-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.comparison-table .row-label {
+  text-align: left;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.comparison-table .highlight {
+  background: #f0f9ff;
+  font-weight: 700;
+  color: #0ea5e9;
+}
+
+.comparison-table .small {
+  font-size: 12px;
+  color: #64748b;
+}
+
+/* Pricing FAQ */
+.pricing-faq {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-faq h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1e293b;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+
+.faq-item-simple {
+  padding: 24px;
+  background: #f8fafc;
+  border-radius: 12px;
+}
+
+.faq-item-simple h4 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 12px;
+}
+
+.faq-item-simple p {
+  font-size: 15px;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .pricing-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card.popular {
+    transform: scale(1);
+  }
+
+  .faq-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .pricing-title {
+    font-size: 32px;
+  }
+
+  .pricing-subtitle {
+    font-size: 16px;
+  }
+
+  .price-card {
+    padding: 30px 20px;
+  }
+
+  .comparison-table {
+    font-size: 14px;
+  }
+
+  .comparison-table th,
+  .comparison-table td {
+    padding: 12px 8px;
+  }
+}
