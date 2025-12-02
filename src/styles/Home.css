@@ -276,16 +276,20 @@
 }
 
 .bottom-title {
-  font-size: 2.5rem;
-  font-weight: 700;
+  font-size: 3.8rem;
+  font-weight: 800;
   color: white;
   margin: 0;
   line-height: 1.15;
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+.bottom-title strong {
+  font-weight: 900;
+}
+
 .bottom-subtitle {
-  font-size: 2.5rem;
+  font-size: 2.24rem;
   font-weight: 700;
   color: white;
   margin: 0 0 1rem 0;
@@ -435,6 +439,23 @@
   color: rgb(136, 211, 241);
   font-weight: 500;
   margin-bottom: 40px;
+}
+
+.brand-highlight {
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.brand-name {
+  color: white;
+  font-weight: 600;
+}
+
+.competitor-text {
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(136, 211, 241, 0.7);
 }
 
 .comparison-tagline {

@@ -52,15 +52,14 @@ function Home() {
 
         {/* 하단 좌측 컨텐츠 */}
         <div className="bottom-left-content">
-          <h2 className="bottom-title">Smarter Health Tracking</h2>
-          <p className="bottom-subtitle">Built for the Pets You Love</p>
+          <h2 className="bottom-title">반려 가족 <strong>건강 지킴이</strong></h2>
+          <p className="bottom-subtitle">24시간 AI 케어</p>
           <p className="bottom-description">
-            The first wearable that monitors body temperature, movement, and early health signals —<br />
-            so you can protect your pet before symptoms appear.
+            0.2도 체온 변화부터 행동 패턴까지, 증상 전에 먼저 알려드립니다
           </p>
           <div className="bottom-buttons">
-            <button className="wearable-btn">Dog Wearable</button>
-            <button className="wearable-btn">Cat Wearable</button>
+            <button className="wearable-btn">강아지용 제품</button>
+            <button className="wearable-btn">고양이용 제품</button>
           </div>
         </div>
       </section>
@@ -74,7 +73,7 @@ function Home() {
                 <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
               </svg>
             </div>
-            <h3 className="feature-title">Health Tracking</h3>
+            <h3 className="feature-title">24시간 건강 체크</h3>
           </div>
 
           <div className="feature-item">
@@ -87,7 +86,7 @@ function Home() {
                 <circle cx="12" cy="19" r="1"></circle>
               </svg>
             </div>
-            <h3 className="feature-title">Movement & Behavior Monitoring</h3>
+            <h3 className="feature-title">일상 속 작은 변화 포착</h3>
           </div>
 
           <div className="feature-item">
@@ -96,7 +95,7 @@ function Home() {
                 <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
               </svg>
             </div>
-            <h3 className="feature-title">Future-Ready Expansion</h3>
+            <h3 className="feature-title">계속 진화하는 케어</h3>
           </div>
         </div>
       </section>
@@ -104,11 +103,11 @@ function Home() {
       {/* 비교표 섹션 */}
       <section className="comparison-section">
         <div className="comparison-header">
-          <h1 className="comparison-main-title">Why JellyBeam Detects Early Signals Better</h1>
-          <p className="comparison-main-subtitle">JellyBeam Loopband vs Competitors</p>
+          <h1 className="comparison-main-title">0.2도의 차이가 생명을 지킵니다</h1>
+          <p className="comparison-main-subtitle"><span className="brand-name">젤리빔</span>만의 <strong className="brand-highlight">차별화된 기술력</strong></p>
           <p className="comparison-tagline">
-            0.2℃ 정밀 온도 감지와 AI 기반 멀티시그널 융합 기술로<br />
-            반려동물의 미세한 건강 신호를 가장 먼저 발견합니다
+            작은 체온 변화부터 평소와 다른 행동까지,<br />
+            AI가 24시간 분석해 아프기 전에 미리 알려드립니다
           </p>
         </div>
 
@@ -116,10 +115,10 @@ function Home() {
           <div className="comparison-table">
             {/* 헤더 */}
             <div className="table-header">
-              <div className="header-cell">기능 / Capability</div>
-              <div className="header-cell jellybeam-header">JellyBeam</div>
-              <div className="header-cell">Major Competitor</div>
-              <div className="header-cell">Basic Tracker</div>
+              <div className="header-cell">주요 기능</div>
+              <div className="header-cell jellybeam-header">젤리빔</div>
+              <div className="header-cell">주요 경쟁사</div>
+              <div className="header-cell">일반 트래커</div>
             </div>
 
             {/* 바디 */}
@@ -128,7 +127,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">🌡️</span>
-                  <span>High-Accuracy Temperature (±0.2℃)</span>
+                  <span>초정밀 체온 측정 (±0.2℃)</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟢</div>
                 <div className="cell-value cell-competitor">🟡</div>
@@ -139,7 +138,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">💓</span>
-                  <span>HRV-based Stress Score</span>
+                  <span>심박변이 기반 스트레스 측정</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟢</div>
                 <div className="cell-value cell-competitor">🟢</div>
@@ -150,7 +149,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">😴</span>
-                  <span>Sleep Pattern Analysis</span>
+                  <span>수면 패턴 분석</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟢</div>
                 <div className="cell-value cell-competitor">🟢</div>
@@ -161,7 +160,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">⚠️</span>
-                  <span>Early Warning Alerts (Baseline AI)</span>
+                  <span>AI 조기 경보 알림</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟢</div>
                 <div className="cell-value cell-competitor">🟢</div>
@@ -172,7 +171,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">🧠</span>
-                  <span>Vital Index (Multi-Signal Fusion AI)</span>
+                  <span>생체신호 융합 AI 분석</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟢</div>
                 <div className="cell-value cell-competitor">🟡</div>
@@ -183,7 +182,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">🐾</span>
-                  <span>Behavioral Pattern Detection</span>
+                  <span>행동 패턴 감지</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟢</div>
                 <div className="cell-value cell-competitor">🟡</div>
@@ -194,7 +193,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">📊</span>
-                  <span>Vet / Family Share Report</span>
+                  <span>수의사·가족 공유 리포트</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟢</div>
                 <div className="cell-value cell-competitor">🟡</div>
@@ -205,7 +204,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">⚙️</span>
-                  <span>OTA Firmware Update</span>
+                  <span>무선 펌웨어 업데이트</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟢</div>
                 <div className="cell-value cell-competitor">🟢</div>
@@ -216,7 +215,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">⌚</span>
-                  <span>Lightweight Loopband Comfort Fit</span>
+                  <span>가볍고 편안한 착용감</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟡</div>
                 <div className="cell-value cell-competitor">🟡</div>
@@ -227,7 +226,7 @@ function Home() {
               <div className="table-row">
                 <div className="row-label">
                   <span className="row-icon">📱</span>
-                  <span>Subscription + Analytics Platform</span>
+                  <span>구독형 분석 플랫폼</span>
                 </div>
                 <div className="cell-value cell-jellybeam">🟡</div>
                 <div className="cell-value cell-competitor">🟢</div>
@@ -239,15 +238,15 @@ function Home() {
             <div className="legend">
               <div className="legend-item">
                 <span className="legend-icon">🟢</span>
-                <span><strong>Full Support</strong> - 완전 지원</span>
+                <span><strong>완전 지원</strong></span>
               </div>
               <div className="legend-item">
                 <span className="legend-icon">🟡</span>
-                <span><strong>Limited</strong> - 제한적</span>
+                <span><strong>제한적 지원</strong></span>
               </div>
               <div className="legend-item">
                 <span className="legend-icon">❌</span>
-                <span><strong>Not Available</strong> - 미지원</span>
+                <span><strong>미지원</strong></span>
               </div>
             </div>
           </div>
@@ -257,19 +256,19 @@ function Home() {
             <div className="highlight-card">
               <div className="highlight-number">8/10</div>
               <div className="highlight-text">
-                기능 완전 지원<br /><strong>Full Support Features</strong>
+                <strong>주요 기능 완전 지원</strong>
               </div>
             </div>
             <div className="highlight-card">
               <div className="highlight-number">±0.2℃</div>
               <div className="highlight-text">
-                정밀 온도 감지<br /><strong>Industry-Leading Accuracy</strong>
+                <strong>업계 최고 정밀도</strong>
               </div>
             </div>
             <div className="highlight-card">
               <div className="highlight-number">AI</div>
               <div className="highlight-text">
-                멀티시그널 융합 기술<br /><strong>Advanced Early Detection</strong>
+                <strong>첨단 조기 감지 기술</strong>
               </div>
             </div>
           </div>

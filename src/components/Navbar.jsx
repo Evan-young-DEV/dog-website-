@@ -23,19 +23,19 @@ function Navbar() {
 
   const menuItems = [
     {
-      title: 'Product Info',
-      items: ['Features', 'Specifications', 'How to Use']
+      title: '제품 소개',
+      items: ['주요 기능', '제품 사양', '사용 방법']
     },
     {
-      title: 'Healthcare',
-      items: ['Health Monitoring', 'Disease Detection', 'Activity Tracking']
+      title: '건강 케어',
+      items: ['건강 모니터링', '질병 감지', '활동 추적']
     },
     {
-      title: 'Gallery',
+      title: '갤러리',
       link: 'gallery'
     },
     {
-      title: 'Contact',
+      title: '문의하기',
       link: 'contact'
     }
   ];
@@ -100,7 +100,7 @@ function Navbar() {
         </ul>
 
         <button className="nav-btn" onClick={() => scrollToSection('contact')}>
-          Shop Now
+          구매하기
         </button>
       </div>
     </nav>
