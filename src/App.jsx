@@ -16,11 +16,11 @@ function App() {
     <div className="App">
       <Navbar />
       <Home />
-      <Pricing />
-      <Science />
       <Specs />
+      <Science />
       <Dogs />
       <Reviews />
+      <Pricing />
       <Guarantee />
       <FAQ />
       <Contact />
