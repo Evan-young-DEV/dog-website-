@@ -3,6 +3,9 @@ import '../styles/FAQ.css';
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [searchTerm, setSearchTerm] = useState('');
+  const [showAll, setShowAll] = useState(false);
 
   const faqs = [
     {
@@ -131,30 +134,92 @@ function FAQ() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const categories = ['all', '제품', '구독', '기술', '지원'];
+
+  // 필수 FAQ 인덱스 (가장 중요한 질문들)
+  const essentialFaqIndices = [0, 1, 2, 3, 8, 9, 10, 11];
+
+  const filteredFaqs = faqs.filter(faq => {
+    const matchesCategory = selectedCategory === 'all' ||
+      (selectedCategory === '제품' && ['제품 사용', '방수', '착용감', '배송'].includes(faq.category)) ||
+      (selectedCategory === '구독' && ['구독', '환불', '다견'].includes(faq.category)) ||
+      (selectedCategory === '기술' && ['배터리', '호환성', '정확도', '위치', '데이터'].includes(faq.category)) ||
+      (selectedCategory === '지원' && ['병원', '건강', 'AS', '분실', '수명', '보안', '알림', '반려동물'].includes(faq.category));
+
+    const matchesSearch = faq.question.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      faq.answer.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return matchesCategory && matchesSearch;
+  });
+
+  // 검색이나 카테고리 필터가 활성화되지 않았을 때만 필수 FAQ만 표시
+  const displayFaqs = (searchTerm || selectedCategory !== 'all' || showAll)
+    ? filteredFaqs
+    : filteredFaqs.filter((faq, idx) => essentialFaqIndices.includes(faqs.indexOf(faq)));
+
   return (
     <section id="faq" className="faq-section">
       <div className="faq-container">
         <h2 className="faq-title">자주 묻는 질문</h2>
         <p className="faq-subtitle">궁금한 점이 있으신가요? 여기에서 답을 찾아보세요</p>
 
-        <div className="faq-list">
-          {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className={`faq-item ${openIndex === index ? 'active' : ''}`}
-              onClick={() => toggleFAQ(index)}
+        <div className="faq-search-wrapper">
+          <input
+            type="text"
+            className="faq-search"
+            placeholder="궁금한 내용을 검색해보세요..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+
+        <div className="faq-categories">
+          {categories.map(category => (
+            <button
+              key={category}
+              className={`category-btn ${selectedCategory === category ? 'active' : ''}`}
+              onClick={() => setSelectedCategory(category)}
             >
-              <div className="faq-question">
-                <span className="faq-icon">{faq.icon}</span>
-                <span className="faq-question-text">{faq.question}</span>
-                <span className="faq-toggle">{openIndex === index ? '−' : '+'}</span>
-              </div>
-              <div className={`faq-answer ${openIndex === index ? 'open' : ''}`}>
-                <p>{faq.answer}</p>
-              </div>
-            </div>
+              {category === 'all' ? '전체' : category}
+            </button>
           ))}
         </div>
+
+        <div className="faq-list">
+          {displayFaqs.length === 0 ? (
+            <div className="faq-no-results">
+              <p>검색 결과가 없습니다</p>
+            </div>
+          ) : (
+            displayFaqs.map((faq) => {
+              const originalIndex = faqs.indexOf(faq);
+              return (
+                <div
+                  key={originalIndex}
+                  className={`faq-item ${openIndex === originalIndex ? 'active' : ''}`}
+                  onClick={() => toggleFAQ(originalIndex)}
+                >
+                  <div className="faq-question">
+                    <span className="faq-icon">{faq.icon}</span>
+                    <span className="faq-question-text">{faq.question}</span>
+                    <span className="faq-toggle">{openIndex === originalIndex ? '−' : '+'}</span>
+                  </div>
+                  <div className={`faq-answer ${openIndex === originalIndex ? 'open' : ''}`}>
+                    <p>{faq.answer}</p>
+                  </div>
+                </div>
+              );
+            })
+          )}
+        </div>
+
+        {!searchTerm && selectedCategory === 'all' && !showAll && (
+          <div className="faq-show-more">
+            <button className="show-more-btn" onClick={() => setShowAll(true)}>
+              더 많은 질문 보기 ({faqs.length - essentialFaqIndices.length}개 더보기)
+            </button>
+          </div>
+        )}
 
         <div className="faq-cta">
           <h3>여전히 궁금한 점이 있으신가요?</h3>
