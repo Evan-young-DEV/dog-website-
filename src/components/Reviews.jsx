@@ -100,7 +100,7 @@ function Reviews() {
       petAge: 4,
       petBreed: "골든리트리버",
       text: "탄이가 밤에 28~30번 깼다는 기록 보고 너무 미안해서 울었어요. 한 달 관리했더니 수면 점수 97점… 표정부터 달라졌습니다.",
-      image: "/images/20251125_112839.png"
+      image: "/images/golden-retriever-tani.png"
     }
   ];
 
