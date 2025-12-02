@@ -159,33 +159,33 @@ function Science() {
             <div className="publication-item">
               <span className="pub-type">논문</span>
               <p className="pub-title">
-                "AI-based Early Disease Detection in Companion Animals using Wearable Sensors"
+                "Continuous Activity Monitoring Using a Wearable Sensor in Dogs with Osteoarthritis"
               </p>
-              <p className="pub-source">Journal of Veterinary Science, 2024</p>
+              <p className="pub-source">Animals (MDPI), 2025 — 관절염 강아지 56~126일 연속 모니터링. 9건 중 8건에서 웨어러블 데이터 변화가 통증 악화·회복 시점과 일치</p>
             </div>
 
             <div className="publication-item">
               <span className="pub-type">학회</span>
               <p className="pub-title">
-                "반려동물 웨어러블 센서의 임상적 유용성"
+                "AI 기반 반려동물 헬스케어용 원격 웨어러블 생체신호 분석 시스템"
               </p>
-              <p className="pub-source">대한수의학회 춘계학술대회, 2024.5</p>
+              <p className="pub-source">한국정보처리학회(KIPS ACK), 2025 — 근골격계 질환 예방·조기 진단 목표. 실시간 EMG+PPG 분석으로 피로도·심박수 계산</p>
             </div>
 
             <div className="publication-item">
               <span className="pub-type">보도</span>
               <p className="pub-title">
-                "AI가 반려견 건강 지킨다... JellyBeam, 조기 발견율 94%"
+                "케어식스, 반려동물 질병 모니터링 웨어러블 'Sense 1' 개발"
               </p>
-              <p className="pub-source">조선일보, 2024.9.15</p>
+              <p className="pub-source">IT비즈뉴스, 2022~2025 — 심박·호흡·체온·심전도 실시간 측정. 이상 징후 시 보호자 알림으로 조기 치료 지원</p>
             </div>
 
             <div className="publication-item">
               <span className="pub-type">보도</span>
               <p className="pub-title">
-                "Korean Pet Wearable Startup Raises $5M"
+                "Wearable Health Tech Helps You Care for Your Pet with Early Alerts"
               </p>
-              <p className="pub-source">TechCrunch, 2024.10.3</p>
+              <p className="pub-source">PetPace Blog, 2025 — 반려동물은 통증·스트레스를 숨김. 웨어러블이 HRV·활동 패턴 변화로 육안 전 subtle signs 포착</p>
             </div>
           </div>
         </div>
