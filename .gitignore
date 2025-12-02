@@ -23,6 +23,5 @@ dist-ssr
 *.sln
 *.sw?
 
-# Video files (too large for GitHub)
-public/videos/*.mp4
+# Video files are now included
 *.mp4
