@@ -103,7 +103,7 @@ function Home() {
       {/* 비교표 섹션 */}
       <section className="comparison-section">
         <div className="comparison-header">
-          <h1 className="comparison-main-title">0.2도의 차이가 생명을 지킵니다</h1>
+          <h1 className="comparison-main-title">0.1도의 차이가 생명을 지킵니다</h1>
           <p className="comparison-main-subtitle"><span className="brand-name">젤리빔</span><span style={{color: 'white'}}>만의</span> <strong className="brand-highlight">차별화된 기술력</strong></p>
           <p className="comparison-tagline">
             작은 체온 변화부터 평소와 다른 행동까지,<br />
